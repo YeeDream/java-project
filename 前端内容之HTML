@@ -1,0 +1,138 @@
+
+HTML
+--
+
+---
+
+
+##### 一.基本格式
+
+```
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>标题</title>
+	</head>
+	<body>
+		内容
+	</body>
+</html>
+```
+
+>>(1)html标记代表HTML文件的开始和结束
+
+>>(2)html不区分大小写
+
+>>(3)html是一个弱语法规则语言
+
+>>(4)html由很多很多的标记组成
+
+>>(5)html：超文本标记语言
+
+>>(6)html标记其实就是很多的节点
+
+>>(7)head:头标记，对当前html文档的设置
+
+>>(8)body标记：正文部分，就是html的显示内容
+
+##### 二.常用标记
+    
+(1)h1-h6:标题标记，自带换行和加粗操作    
+
+(2)br:换行标记
+
+(3)font:文字设置，color:颜色，size:大小（1-7，默认值为3，也可以写成+1）
+    
+(4)b,i,u,tt,sub,sup:加粗，倾斜，下划线，打印机，底数，次方
+     
+(5)p:段落；&lt:<;&gt:>；&amp:&；&nbsp:空格
+
+(6)hr:分割线；pre：按照输入的文本格式输出
+
+(7)链接：
+
+      内链接（书签）：href="#sql"
+         
+    外链接：
+         
+    邮件链接：href="mailto:邮箱地址"
+
+(8)对于鼠标点击：
+    
+    link:未使用  
+    alink:正在使用
+    vlink:已使用的
+
+##### 三.传值问题
+
+  (1)get方式，url携带参数
+     
+>>可以通过window.location.search获取url上的参数。
+
+  (2)通过cookie，传递
+    
+>>cookie能够存储少量数据到客户端的磁盘中，特定的网页之间是共享cookie中的数据。
+  
+(3)window.open和window.opener之间传值
+      
+>>window.open可以打开一个新的页面，在新的页面中可以通过window.opener获取父页面的窗口对象，从而可以获取父窗口中的参数。
+  
+(4)h5技术，window.localStorage存储数据
+     
+>>在HTML5中，新加入了一个localStorage特性，这个特性主要是用来作为本地存储来使用的，解决了cookie存储空间不足的问题(cookie中每条cookie的存储空间为4k)，localStorage中一般浏览器支持的是5M大小，这个在不同的浏览器中localStorage会有所不同。此方法类似cookie，将数据存在一个公共的地方，实现页面之间传值。
+
+##### 四.表单组件
+  
+(1)文本框：text     
+
+>>value:初始值；placeholder:水印；required:必填项；readonly:只读
+  
+(2)密码框：password   
+ 
+(3)单选按钮：radio
+
+(4)复选按钮：checkbox
+  
+(5)电话号码：tel   邮件：email  数字：number  颜色：color  搜索框：search   时间日期：date/time/datetime-local   上传：file   隐藏域：hidden   下拉菜单:prov  
+
+(6)提交按钮：submit   重置按钮：reset   图片：image
+      name必须一致为一组按钮
+
+(7)method方式：post加密（数据量多），速度慢，get(默认)：不加密（数据量小），速度快
+  
+(8)enctype:
+
+>>application/x-www-form-urlencoded文本（默认）
+             
+>>Multipart/form-data上传
+
+##### 五.表格组件
+  
+(1)<thread></thread>
+
+(2)<th></th>表头
+
+(3)<td></td>表格单元格
+
+(4)<tr></tr>表格的行元素
+
+(5)合并
+>>rowspan:行合并（用于一个单元格跨越多行）    
+
+>>colspan：列合并（用于一个单元格跨越多列）
+
+##### 六.框架集
+
+1.body和框架集标签不同时使用
+
+2.框架集标签：frameset
+
+3.属性：rows行分割     cols列分割
+
+ 4.frame属性：
+  
+-         src:指定要嵌入的页面
+           
+-         noresize=”noresize”可以阻止border拖拽
+            
+-         name:用于指定战士的内容所在的frame
